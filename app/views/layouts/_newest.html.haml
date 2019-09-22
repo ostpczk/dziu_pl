@@ -1,0 +1,16 @@
+-@posts.reverse_each do |p|
+  .container.bg-light.rounded.my-4
+    .row.mx-3.px-md-3.pt-5
+      .col-sm-10
+        %blockquote.blockquote
+          %a.post-body{:href => post_path(p)}
+            =p.body_text
+          %footer.blockquote-footer.text-right
+            =p.author
+            %br
+            =p.created_at.strftime("%d.%m.%Y r. %H:%M")
+      .col-sm-2
+        = link_to "↑", p, remote:true, data: {url: "posts/vote", params:'upvote=up', method: :post}, id: "upvote-#{p.id}"
+        %span{id: "score-#{p.id}"}
+          =p.score
+        = link_to "↓", p, remote:true, data: {url: "posts/vote", params:'upvote=down', method: :post}, id: "downvote-#{p.id}"  

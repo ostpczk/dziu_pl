@@ -1,0 +1,51 @@
+header.dziu-header {
+  overflow:hidden;
+}
+
+.dziu-top-bar {
+  float: center;
+  width: auto;
+  height: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.dziu-logo {
+  display:block;
+  color: black;
+  font-size: 30px;
+  font-weight: 1000;
+  text-decoration: none;
+  height: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.dziu-logo:hover {
+  color: black;
+  text-decoration:none;
+}
+
+.dziu-logo:hover ~ .logo-underbar {
+  width:80%;
+}
+
+.logo-underbar {
+  position: relative;
+  left: 10%;
+  background-color: black;
+  height: 2px;
+  width: 0;
+  margin: 0px;
+  padding: 0px;
+  transition: width 0.7s ease-in-out;
+}
+
+.dziu-quote{
+  color: #aaa;
+  font-family: serif;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+

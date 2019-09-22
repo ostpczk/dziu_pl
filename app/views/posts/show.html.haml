@@ -1,0 +1,10 @@
+.container.bg-light.rounded.my-4
+  .row.mx-3.px-md-3.pt-5
+    .col-sm-10
+      %blockquote.blockquote
+        %a.post-body{:href => post_path(@post)}
+          =@post.body_text
+        %footer.blockquote-footer.text-right
+          =@post.author
+          %br
+          =@post.created_at.strftime("%d.%m.%Y r. %H:%M")

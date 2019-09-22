@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Dziu.pl
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %script{:src => "https://www.google.com/recaptcha/api.js", async: true, defer: true}
+
+  %header.dziu-header
+    = render 'layouts/header'
+
+  %body.bg-primary
+    = yield
