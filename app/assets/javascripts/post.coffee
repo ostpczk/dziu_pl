@@ -10,5 +10,6 @@ $ ->
 
 $ ->
   $('#body_text').click ->
-    $('.shoutbox-unveil').slideDown()
+    $('.shoutbox-unveil').collapse()
     return
+
