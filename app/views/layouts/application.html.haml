@@ -9,8 +9,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script{:src => "https://www.google.com/recaptcha/api.js", async: true, defer: true}
 
-  %header.dziu-header
-    = render 'layouts/header'
+  = render 'layouts/header'
 
   %body.bg-primary
     = yield
