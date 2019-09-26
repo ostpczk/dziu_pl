@@ -8,6 +8,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script{:src => "https://www.google.com/recaptcha/api.js", async: true, defer: true}
+    %script{:src => "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", async: true}
+    :javascript
+      (adsbygoogle = window.adsbygoogle || []).push({
+           google_ad_client: "ca-pub-8628103174834527",
+           enable_page_level_ads: true
+      });
 
   = render 'layouts/header'
 
