@@ -7,3 +7,8 @@ $ ->
     data = event.detail[0]
     scoreId = "score-" + data.id
     document.getElementById(scoreId).innerHTML = data.score
+
+$ ->
+  $('#body_text').click ->
+    $('.shoutbox-unveil').slideDown()
+    return
