@@ -47,3 +47,63 @@
 
 .dziu-navbar {
 }
+
+.post-body {
+  word-wrap: break-word;
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  //justify-content: center;
+}
+
+.page, .prev, .next, .first, .last {
+  border: solid #0c43f9 1px;
+  box-decoration-break: clone;
+
+
+  background-color: #a7d6f9;
+  margin-left: 2px;
+  margin-right: 2px;
+
+  > a, span {
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  > a:hover, span:hover {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: #163f5e;
+  }
+
+  &.current {
+  border: solid #0c43f9 1px;
+  background-color: #fc9f1e;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+
+}
+
+.first, .prev, .next, .last {
+  overflow: hidden;
+  white-space:nowrap;
+}
+
+.first, .last {
+  background-color: #284ca0;
+}
+
+.prev, .next {
+  background-color: #3c6db8;
+}

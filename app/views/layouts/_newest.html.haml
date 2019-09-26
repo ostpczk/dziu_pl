@@ -1,4 +1,4 @@
--@posts.reverse_each do |p|
+-@posts.each do |p|
   .container.bg-light.rounded.my-4
     .row.mx-3.px-md-3.pt-5
       .col-sm-10
@@ -13,4 +13,9 @@
         = link_to "↑", p, remote:true, data: {url: "posts/vote", params:'upvote=up', method: :post}, id: "upvote-#{p.id}"
         %span{id: "score-#{p.id}"}
           =p.score
-        = link_to "↓", p, remote:true, data: {url: "posts/vote", params:'upvote=down', method: :post}, id: "downvote-#{p.id}"  
+        = link_to "↓", p, remote:true, data: {url: "posts/vote", params:'upvote=down', method: :post}, id: "downvote-#{p.id}" 
+
+.container
+  .row
+    .col-sm.bg-light.rounded.mx-auto.my-6.py-2.text-center
+      =paginate @posts
